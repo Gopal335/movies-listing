@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Movies & Shows Directory
 
-## Getting Started
+A modern directory for top movies (and tv shows), letterboxd-inspired, built with Next.js 14 App Router, Tailwind CSS, and TypeScript. Features multi-page navigation, search, filters, and permutations, using a local JSON dataset.
 
-First, run the development server:
+## ✨ Features
+- Home/about: project pitch and dataset details
+- Movie listing (grid, search, filter by genre, sort by rating/year/title)
+- Detailed movie/show pages (poster, genres, release year, rating, plot, cast)
+- Permutation pages: by genre, starring actor, year/decade (e.g. Best Crime Movies, Movies starring Tom Hanks, Best Movies of 1994)
+- Clean responsive UI, dark/light mode, and sticky navigation
+- SEO-ready: all routes have semantic metadata and a sitemap
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🗃️ Dataset
+- `src/data/movies.json` — static top 250 movies (sample, can expand)
+- Fields: id, title, genres, rating, release_date, poster, overview, cast, director, runtime
+- Inspired by TMDB, IMDb, and letterboxd feature set
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Stack
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- ESLint, Prettier
+- No database, just fast static JSON
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎬 How to Use/Deploy
+1. Run locally: `npm install && npm run dev` and open [http://localhost:3000](http://localhost:3000)
+2. Add movie posters as `/public/[movie-poster].jpg` files for best results
+3. Deploy to Vercel for instant production hosting
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💡 AI Prompts Used
+- Generate random movie json: "Give me JSON of the top movies, each with id, title, genres, rating, release_date, poster, overview, cast, director, runtime."
+- "Write a Next.js App Router listing page for these movies."
+- "Tailwind classes for beautiful movie card UI?"
 
-## Learn More
+## 🚀 Next Steps
+- Add user reviews, watchlists, links to streaming.
+- Pagination, more data 🎞️.
+- More permutations/pages by decade/director.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Intern project: Movies & Shows Directory, full-featured.**
